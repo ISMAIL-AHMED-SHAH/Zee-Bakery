@@ -22,7 +22,8 @@ for item, quantity in st.session_state.inventory.items():
     st.sidebar.write(f"📌 **{item}:** {quantity}")
 
 # Sell items section
-st.title("🛒 Sell Items")
+st.title("🎂 Welcome to Zee Bakery 📦")
+st.subheader("🛒 Sell Items")
 sell_item = st.selectbox("Select Item to Sell", list(st.session_state.inventory.keys()) if st.session_state.inventory else ["No items available"])
 sell_quantity = st.number_input("Quantity to Sell", min_value=1, step=1)
 
